@@ -38,7 +38,7 @@ async function adminDashboardTest() {
         await loginBtn.click();
         console.log("Login clicked");
 
-        // 🔥 HANDLE ALERT SAFELY
+        //  HANDLE ALERT SAFELY
         await driver.wait(until.alertIsPresent(), 10000);
         const alert = await driver.switchTo().alert();
 
