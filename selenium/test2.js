@@ -31,6 +31,9 @@ const { Builder, By, until } = require('selenium-webdriver');
         let auto = await driver.findElement(By.id("autocomplete"));
         await auto.sendKeys("India");
 
+        let myautocomplete = await driver.findElement(By.id("autocomplete"))
+        await myautocomplete.sendKeys("india")
+
         // =============================
         // Dropdown Selection
         // =============================
@@ -50,8 +53,8 @@ const { Builder, By, until } = require('selenium-webdriver');
         // =============================
         await driver.findElement(By.id("alertbtn")).click();
 
-        let alert = await driver.switchTo().alert();
-        let alertText = await alert.getText();
+        let alert = await driver.switchTo().alert();//useing the switchto,
+        let alertText = await alert.getText();//geting all text
         console.log("Alert Text:", alertText);
         await alert.accept();
 
